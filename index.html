@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MAAC - Soluciones en Sistemas, CCTV y TI</title>
+    
+    <!-- ENCABEZADOS Y SEGURIDAD (CSP / XSS PROTECTION) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: 'unsafe-inline' 'unsafe-eval';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
     <!-- FAVICON -->
     <link rel="icon" type="image/png" href="img/logo_maac_circular.png">
+    
     <!-- BOOTSTRAP 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- ICONOS DE FONTAWESOME -->
@@ -18,21 +25,22 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top custom-nav">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-                <img src="img/logo_maac_circular.png" alt="MAAC Logo" height="50" onerror="this.src='https://via.placeholder.com/50/d4af37/000000?text=MAAC'">
-                <span class="fw-bold text-gold fs-4">MAAC</span>
+            <!-- LOGO SUPERIOR MÁS GRANDE -->
+            <a class="navbar-brand d-flex align-items-center gap-2 py-1" href="#">
+                <img src="img/logo_maac_circular.png" alt="MAAC Logo" class="brand-logo-top" onerror="this.src='https://via.placeholder.com/65/d4af37/000000?text=MAAC'">
+                <span class="fw-bold text-gold fs-3">MAAC</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center gap-2">
-                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#camaras">Cámaras</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#marcas">Marcas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                    <li class="nav-item ms-lg-2">
-                        <a class="btn btn-whatsapp fw-bold rounded-pill px-3" href="https://wa.me/5215563426952?text=Hola,%20me%20interesa%20una%20cotización%20de%20sus%20servicios%20de%20CCTV%20y%20Sistemas." target="_blank">
+                <ul class="navbar-nav ms-auto align-items-center gap-2 pt-2 pt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-center" href="#contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link text-center" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link text-center" href="#camaras">Cámaras</a></li>
+                    <li class="nav-item"><a class="nav-link text-center" href="#marcas">Marcas</a></li>
+                    <li class="nav-item ms-lg-2 w-100 text-center">
+                        <a class="btn btn-whatsapp fw-bold rounded-pill px-3 py-2 w-100 w-lg-auto mt-2 mt-lg-0" href="https://wa.me/5215563426952?text=Hola,%20me%20interesa%20una%20cotización%20de%20sus%20servicios%20de%20CCTV%20y%20Sistemas." target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-whatsapp me-1"></i> WhatsApp
                         </a>
                     </li>
@@ -42,58 +50,112 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="hero-section text-center text-white d-flex align-items-center">
+    <header class="hero-section text-center text-white d-flex align-items-center py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-lg-9">
+                <div class="col-lg-9 col-12 px-3">
                     <span class="badge bg-gold text-dark mb-3 px-3 py-2 fw-bold uppercase">Sistemas • CCTV • TI</span>
-                    <h1 class="display-4 fw-bold mb-3">Seguridad Electrónica e Infraestructura Tecnológica Profesional</h1>
-                    <p class="lead text-muted-custom mb-4">Especialistas en instalación de videovigilancia CCTV, estructuración de redes, soporte técnico e infraestructura de sistemas para empresas y particulares.</p>
-                    <div class="d-flex justify-content-center gap-3 flex-wrap">
-                        <a href="https://wa.me/5215563426952?text=Hola,%20quisiera%20solicitar%20una%20cotización." target="_blank" class="btn btn-gold btn-lg fw-bold">Solicitar Cotización</a>
-                        <a href="#marcas" class="btn btn-outline-cyan btn-lg fw-bold">Nuestras Marcas</a>
+                    <h1 class="display-5 display-lg-4 fw-bold mb-3 text-break">Seguridad Electrónica e Infraestructura Tecnológica Profesional</h1>
+                    <p class="lead text-muted-custom mb-4 fs-6 fs-lg-5">Especialistas en instalación de videovigilancia CCTV, estructuración de redes, soporte técnico e infraestructura de sistemas para empresas y particulares.</p>
+                    <div class="d-flex justify-content-center gap-3 flex-column flex-sm-row">
+                        <a href="https://wa.me/5215563426952?text=Hola,%20quisiera%20solicitar%20una%20cotización." target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-lg fw-bold w-100 w-sm-auto">Solicitar Cotización</a>
+                        <a href="#marcas" class="btn btn-outline-cyan btn-lg fw-bold w-100 w-sm-auto">Nuestras Marcas</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- SERVICIOS -->
-    <section id="servicios" class="py-5">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="section-title">NUESTROS SERVICIOS</h2>
-                <p class="text-muted-custom">Soluciones integrales diseñadas para proteger y optimizar tu negocio</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card service-card h-100 p-4 text-center">
-                        <div class="icon-box mx-auto mb-3"><i class="fas fa-video fa-2x"></i></div>
-                        <h4 class="card-title text-gold mb-3">Sistemas de CCTV</h4>
-                        <p class="text-muted-custom">Instalación y mantenimiento de cámaras de seguridad HD e IP, visores remotos en móviles, DVR/NVR y centros de monitoreo.</p>
+    <!-- DATOS DE CONTACTO (MOVIDO A LA PARTE SUPERIOR) -->
+    <section id="contacto" class="py-5 bg-card border-bottom border-secondary">
+        <div class="container py-2 py-lg-4">
+            <div class="row g-4 align-items-center">
+                <div class="col-lg-6 col-12">
+                    <h2 class="section-title mb-4 text-center text-lg-start">DATOS DE CONTACTO</h2>
+                    <p class="text-muted-custom mb-4 text-center text-lg-start fs-6">Ponte en contacto con nosotros para asesoría técnica o agendar una visita en tu empresa o domicilio.</p>
+                    
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="contact-icon me-3 flex-shrink-0"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <div class="text-muted-custom small uppercase">Teléfono / WhatsApp</div>
+                            <div class="fw-bold fs-5 text-white text-break">+52 1 55 6342 6952</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="contact-icon me-3 flex-shrink-0"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="text-muted-custom small uppercase">Correo Electrónico</div>
+                            <div class="fw-bold fs-5 text-white text-break">manuel.ap@cctvmaac.com.mx</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="contact-icon me-3 flex-shrink-0"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="text-muted-custom small uppercase">Cobertura de Servicio</div>
+                            <div class="fw-bold fs-5 text-white">Atención Local y Comercial</div>
+                        </div>
+                    </div>
+
+                    <div class="text-center text-lg-start">
+                        <a href="https://wa.me/5215563426952?text=Hola,%20quisiera%20solicitar%20más%20información." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp fw-bold px-4 py-2 w-100 w-sm-auto">
+                            <i class="fab fa-whatsapp me-2"></i> Mandar WhatsApp Directo
+                        </a>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card service-card h-100 p-4 text-center">
-                        <div class="icon-box mx-auto mb-3"><i class="fas fa-network-wired fa-2x"></i></div>
-                        <h4 class="card-title text-gold mb-3">Redes e Infraestructura</h4>
-                        <p class="text-muted-custom">Cableado estructurado, peinado de racks, enlaces inalámbricos, configuración de routers, switches y optimización de Wi-Fi.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card service-card h-100 p-4 text-center">
-                        <div class="icon-box mx-auto mb-3"><i class="fas fa-microchip fa-2x"></i></div>
-                        <h4 class="card-title text-gold mb-3">Soporte y Sistemas TI</h4>
-                        <p class="text-muted-custom">Mantenimiento preventivo/correctivo de equipo de cómputo, diagnóstico de sistemas, control de acceso e integración tecnológica.</p>
+
+                <!-- CÓDIGO QR -->
+                <div class="col-lg-6 col-12 text-center">
+                    <div class="qr-box p-4 rounded-3 border border-secondary d-inline-block w-100 max-w-sm">
+                        <h4 class="text-gold fw-bold mb-3 fs-5"><i class="fas fa-qrcode me-2"></i>Escanea nuestro QR</h4>
+                        <p class="text-muted-custom small mb-3">Guarda los datos de MAAC directamente en tu celular</p>
+                        <a href="https://wa.me/5215563426952" target="_blank" rel="noopener noreferrer">
+                            <img src="img/qr_contacto.jpg" alt="Código QR de Contacto MAAC" class="img-fluid rounded border border-warning p-2 bg-white mb-3 qr-img" onerror="this.src='img/qr_contacto.png'">
+                        </a>
+                        <div class="small text-muted-custom">Escanea para abrir chat de WhatsApp</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CARRUSEL 1: CÁMARAS Y EQUIPAMIENTO -->
+    <!-- SERVICIOS -->
+    <section id="servicios" class="py-5">
+        <div class="container py-2 py-lg-4">
+            <div class="text-center mb-5">
+                <h2 class="section-title">NUESTROS SERVICIOS</h2>
+                <p class="text-muted-custom">Soluciones integrales diseñadas para proteger y optimizar tu negocio</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-12 col-md-4">
+                    <div class="card service-card h-100 p-4 text-center">
+                        <div class="icon-box mx-auto mb-3"><i class="fas fa-video fa-2x"></i></div>
+                        <h4 class="card-title text-gold mb-3 fs-5">Sistemas de CCTV</h4>
+                        <p class="text-muted-custom small">Instalación y mantenimiento de cámaras de seguridad HD e IP, visores remotos en móviles, DVR/NVR y centros de monitoreo.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card service-card h-100 p-4 text-center">
+                        <div class="icon-box mx-auto mb-3"><i class="fas fa-network-wired fa-2x"></i></div>
+                        <h4 class="card-title text-gold mb-3 fs-5">Redes e Infraestructura</h4>
+                        <p class="text-muted-custom small">Cableado estructurado, peinado de racks, enlaces inalámbricos, configuración de routers, switches y optimización de Wi-Fi.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card service-card h-100 p-4 text-center">
+                        <div class="icon-box mx-auto mb-3"><i class="fas fa-microchip fa-2x"></i></div>
+                        <h4 class="card-title text-gold mb-3 fs-5">Soporte y Sistemas TI</h4>
+                        <p class="text-muted-custom small">Mantenimiento preventivo/correctivo de equipo de cómputo, diagnóstico de sistemas, control de acceso e integración tecnológica.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CARRUSEL CÁMARAS -->
     <section id="camaras" class="py-5 bg-card">
-        <div class="container py-4">
+        <div class="container py-2 py-lg-4">
             <div class="text-center mb-4">
                 <h2 class="section-title">EQUIPAMIENTO Y CÁMARAS</h2>
                 <p class="text-muted-custom">Catálogo de modelos de alta definición y tecnología avanzada</p>
@@ -110,36 +172,36 @@
                         <div class="carousel-img-container">
                             <img src="img/camaras/cam_1.png" class="d-block img-fluid mx-auto carousel-img" alt="Cámara Bullet IP HD">
                         </div>
-                        <div class="carousel-caption bg-dark-overlay rounded-3">
-                            <h5 class="text-gold fw-bold">Cámaras Bullet IP HD</h5>
-                            <p class="mb-0">Diseñadas para exteriores, protección contra intemperie y visión nocturna infrarroja de largo alcance.</p>
+                        <div class="carousel-caption bg-dark-overlay rounded-3 p-2 p-sm-3">
+                            <h5 class="text-gold fw-bold fs-6 fs-sm-5">Cámaras Bullet IP HD</h5>
+                            <p class="mb-0 small d-none d-sm-block">Diseñadas para exteriores, protección contra intemperie y visión nocturna infrarroja de largo alcance.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img-container">
                             <img src="img/camaras/cam_2.png" class="d-block img-fluid mx-auto carousel-img" alt="Kits Completos de Seguridad">
                         </div>
-                        <div class="carousel-caption bg-dark-overlay rounded-3">
-                            <h5 class="text-gold fw-bold">Kits Completos y DVR/NVR</h5>
-                            <p class="mb-0">Sistemas integrados con grabación continua, almacenamiento seguro y monitoreo en tiempo real desde celular.</p>
+                        <div class="carousel-caption bg-dark-overlay rounded-3 p-2 p-sm-3">
+                            <h5 class="text-gold fw-bold fs-6 fs-sm-5">Kits Completos y DVR/NVR</h5>
+                            <p class="mb-0 small d-none d-sm-block">Sistemas integrados con grabación continua, almacenamiento seguro y monitoreo en tiempo real desde celular.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img-container">
                             <img src="img/camaras/cam_3.png" class="d-block img-fluid mx-auto carousel-img" alt="Cámaras Domo y Compactas">
                         </div>
-                        <div class="carousel-caption bg-dark-overlay rounded-3">
-                            <h5 class="text-gold fw-bold">Cámaras Domo y Compactas</h5>
-                            <p class="mb-0">Monitoreo discreto e ideal para oficinas, locales comerciales y zonas de atención al cliente.</p>
+                        <div class="carousel-caption bg-dark-overlay rounded-3 p-2 p-sm-3">
+                            <h5 class="text-gold fw-bold fs-6 fs-sm-5">Cámaras Domo y Compactas</h5>
+                            <p class="mb-0 small d-none d-sm-block">Monitoreo discreto e ideal para oficinas, locales comerciales y zonas de atención al cliente.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="carousel-img-container">
                             <img src="img/camaras/cam_4.png" class="d-block img-fluid mx-auto carousel-img" alt="Sistemas Avanzados Dahua">
                         </div>
-                        <div class="carousel-caption bg-dark-overlay rounded-3">
-                            <h5 class="text-gold fw-bold">Sistemas Avanzados Dahua</h5>
-                            <p class="mb-0">Tecnología de última generación con sensor de movimiento, visión nocturna en color y carcasa reforzada.</p>
+                        <div class="carousel-caption bg-dark-overlay rounded-3 p-2 p-sm-3">
+                            <h5 class="text-gold fw-bold fs-6 fs-sm-5">Sistemas Avanzados Dahua</h5>
+                            <p class="mb-0 small d-none d-sm-block">Tecnología de última generación con sensor de movimiento, visión nocturna en color y carcasa reforzada.</p>
                         </div>
                     </div>
                 </div>
@@ -153,16 +215,16 @@
         </div>
     </section>
 
-    <!-- CARRUSEL MINIMALISTA DE MARCAS LÍDERES -->
+    <!-- CARRUSEL DE 8 MARCAS -->
     <section id="marcas" class="py-5">
-        <div class="container py-3">
+        <div class="container py-2 py-lg-3">
             <div class="text-center mb-4">
                 <h2 class="section-title fs-3">MARCAS QUE MANEJAMOS</h2>
                 <p class="text-muted-custom small">Trabajamos únicamente con los fabricantes líderes de la industria</p>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-md-7 col-lg-5">
+                <div class="col-12 col-md-8 col-lg-6">
                     <div id="carouselMarcas" class="carousel slide brand-carousel shadow-sm rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3500">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
@@ -189,6 +251,30 @@
                                     <span class="badge bg-gold text-dark mt-3 px-3 py-1 fw-bold">Dahua Technology</span>
                                 </div>
                             </div>
+                            <div class="carousel-item">
+                                <div class="brand-card d-flex flex-column align-items-center justify-content-center p-4">
+                                    <img src="img/marcas/mar_5.png" class="img-fluid brand-logo" alt="Marca 5" onerror="this.src='img/logo_maac_circular.png'">
+                                    <span class="badge bg-gold text-dark mt-3 px-3 py-1 fw-bold">Marca Líder</span>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="brand-card d-flex flex-column align-items-center justify-content-center p-4">
+                                    <img src="img/marcas/mar_6.png" class="img-fluid brand-logo" alt="Marca 6" onerror="this.src='img/logo_maac_circular.png'">
+                                    <span class="badge bg-gold text-dark mt-3 px-3 py-1 fw-bold">Marca Líder</span>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="brand-card d-flex flex-column align-items-center justify-content-center p-4">
+                                    <img src="img/marcas/mar_7.png" class="img-fluid brand-logo" alt="Marca 7" onerror="this.src='img/logo_maac_circular.png'">
+                                    <span class="badge bg-gold text-dark mt-3 px-3 py-1 fw-bold">Marca Líder</span>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="brand-card d-flex flex-column align-items-center justify-content-center p-4">
+                                    <img src="img/marcas/mar_8.png" class="img-fluid brand-logo" alt="Marca 8" onerror="this.src='img/logo_maac_circular.png'">
+                                    <span class="badge bg-gold text-dark mt-3 px-3 py-1 fw-bold">Marca Líder</span>
+                                </div>
+                            </div>
                         </div>
 
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselMarcas" data-bs-slide="prev">
@@ -203,62 +289,12 @@
         </div>
     </section>
 
-    <!-- DATOS DE CONTACTO Y QR -->
-    <section id="contacto" class="py-5 bg-card border-top border-secondary">
-        <div class="container py-4">
-            <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                    <h2 class="section-title mb-4">DATOS DE CONTACTO</h2>
-                    <p class="text-muted-custom mb-4">Ponte en contacto con nosotros para asesoría técnica o agendar una visita en tu empresa o domicilio.</p>
-                    
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="contact-icon me-3"><i class="fas fa-phone-alt"></i></div>
-                        <div>
-                            <div class="text-muted-custom small uppercase">Teléfono / WhatsApp</div>
-                            <div class="fw-bold fs-5 text-white">+52 1 55 6342 6952</div>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center mb-3">
-                        <div class="contact-icon me-3"><i class="fas fa-envelope"></i></div>
-                        <div>
-                            <div class="text-muted-custom small uppercase">Correo Electrónico</div>
-                            <div class="fw-bold fs-5 text-white">manuel.ap@cctvmaac.com.mx</div>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="contact-icon me-3"><i class="fas fa-map-marker-alt"></i></div>
-                        <div>
-                            <div class="text-muted-custom small uppercase">Cobertura de Servicio</div>
-                            <div class="fw-bold fs-5 text-white">Atención Local y Comercial</div>
-                        </div>
-                    </div>
-
-                    <a href="https://wa.me/5215563426952?text=Hola,%20quisiera%20solicitar%20más%20información." target="_blank" class="btn btn-whatsapp fw-bold px-4 py-2">
-                        <i class="fab fa-whatsapp me-2"></i> Mandar WhatsApp Directo
-                    </a>
-                </div>
-
-                <!-- CÓDIGO QR Y TARJETA DIGITAL -->
-                <div class="col-lg-6 text-center">
-                    <div class="qr-box p-4 rounded-3 border border-secondary d-inline-block">
-                        <h4 class="text-gold fw-bold mb-3"><i class="fas fa-qrcode me-2"></i>Escanea nuestro QR</h4>
-                        <p class="text-muted-custom small mb-3">Guarda los datos de MAAC directamente en tu celular</p>
-                        <a href="https://wa.me/5215563426952" target="_blank">
-                            <img src="img/qr_contacto.jpg" alt="Código QR de Contacto MAAC" class="img-fluid rounded border border-warning p-2 bg-white mb-3" style="max-width: 220px;" onerror="this.src='img/qr_contacto.png'">
-                        </a>
-                        <div class="small text-muted-custom">Escanea para abrir chat de WhatsApp</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
+    <!-- FOOTER CON LOGO DE MARCA -->
     <footer class="text-center py-4 text-muted-custom border-top border-dark" style="background-color: #070a11;">
-        <div class="container">
-            <p class="mb-0 small">© 2026 MAAC - Sistemas & CCTV. Todos los derechos reservados.</p>
+        <div class="container d-flex flex-column align-items-center gap-2">
+            <!-- LOGO INTEGRADO EN EL PIE DE PÁGINA -->
+            <img src="img/logo_maac_texto.png" alt="MAAC Logo" class="footer-logo mb-2" onerror="this.src='img/logo_maac_circular.png'">
+            <p class="mb-0 small text-white-50">© 2026 MAAC - Sistemas & CCTV. Todos los derechos reservados.</p>
         </div>
     </footer>
 

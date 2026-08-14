@@ -1,0 +1,129 @@
+:root {
+    --bg-main: #0b0f19;
+    --bg-card: #131b2e;
+    --accent-gold: #d4af37;
+    --accent-cyan: #00d2ff;
+    --accent-whatsapp: #25d366;
+    --text-white: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: #1e293b;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-card { background-color: var(--bg-card); }
+.text-gold { color: var(--accent-gold) !important; }
+.text-muted-custom { color: var(--text-muted) !important; }
+
+/* NAVBAR */
+.custom-nav {
+    background-color: rgba(11, 15, 25, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--accent-gold);
+}
+
+.nav-link {
+    color: var(--text-white) !important;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.nav-link:hover { color: var(--accent-gold) !important; }
+
+/* BOTONES */
+.btn-gold {
+    background-color: var(--accent-gold);
+    color: #000;
+    border: none;
+}
+.btn-gold:hover { background-color: #b8952b; color: #000; }
+
+.btn-outline-cyan {
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+}
+.btn-outline-cyan:hover { background-color: var(--accent-cyan); color: #000; }
+
+.btn-whatsapp {
+    background-color: var(--accent-whatsapp);
+    color: #fff;
+}
+.btn-whatsapp:hover { background-color: #1eb956; color: #fff; }
+
+/* HERO */
+.hero-section {
+    min-height: 80vh;
+    background: linear-gradient(180deg, rgba(11,15,25,0.85) 0%, rgba(11,15,25,1) 100%), 
+                url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    padding: 100px 0;
+}
+
+.bg-gold { background-color: var(--accent-gold); }
+
+/* TITULOS */
+.section-title {
+    color: var(--accent-gold);
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+/* CARDS SERVICIOS */
+.service-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-gold);
+}
+
+.icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(212, 175, 55, 0.1);
+    color: var(--accent-gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* CARRUSELES */
+.custom-carousel { border: 1px solid var(--border-color); }
+.carousel-img {
+    height: 480px;
+    object-fit: cover;
+}
+.bg-dark-overlay {
+    background: rgba(11, 15, 25, 0.85);
+    padding: 15px 25px;
+    border: 1px solid var(--border-color);
+}
+
+/* CONTACTO Y QR */
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-box { background-color: var(--bg-main); }
+
+@media (max-width: 768px) {
+    .carousel-img { height: 280px; }
+}

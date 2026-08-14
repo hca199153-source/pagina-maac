@@ -91,68 +91,63 @@
         </div>
     </section>
 
-    <!-- CARRUSEL 1: CÁMARAS Y EQUIPAMIENTO (AUTOMÁTICO CON TUS 4 IMÁGENES) -->
+    <!-- CARRUSEL 1: CÁMARAS Y EQUIPAMIENTO (AUTOMÁTICO Y LENTO) -->
     <section id="camaras" class="py-5 bg-card">
         <div class="container py-4">
             <div class="text-center mb-4">
                 <h2 class="section-title">EQUIPAMIENTO Y CÁMARAS</h2>
                 <p class="text-muted-custom">Catálogo de modelos de alta definición y tecnología avanzada</p>
             </div>
-            
-            <div id="carouselCamaras" class="carousel slide custom-carousel shadow-lg rounded-3 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3000">
+            <!-- Se configura interval en 4500ms (4.5s) para movimiento pausado y suave -->
+            <div id="carouselCamaras" class="carousel slide custom-carousel shadow-lg rounded-3 overflow-hidden" data-bs-ride="carousel" data-bs-interval="4500">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselCamaras" data-bs-slide-to="0" class="active"></button>
                     <button type="button" data-bs-target="#carouselCamaras" data-bs-slide-to="1"></button>
                     <button type="button" data-bs-target="#carouselCamaras" data-bs-slide-to="2"></button>
                     <button type="button" data-bs-target="#carouselCamaras" data-bs-slide-to="3"></button>
                 </div>
-                
                 <div class="carousel-inner">
                     <!-- Imagen 1 -->
                     <div class="carousel-item active">
                         <div class="carousel-img-container">
-                            <img src="img/camaras/cam_1.png" class="d-block img-fluid carousel-img-fit" alt="Cámara Bullet Exterior HD">
+                            <img src="img/camaras/cam_1.png" class="d-block img-fluid mx-auto carousel-img" alt="Cámara Bullet IP HD">
                         </div>
-                        <div class="carousel-caption d-block bg-dark-overlay rounded-3">
-                            <h5 class="text-gold fw-bold">Cámaras Bullet Exterior</h5>
-                            <p class="mb-0">Resistentes a intemperie con visión nocturna infrarroja de alcance extendido.</p>
+                        <div class="carousel-caption bg-dark-overlay rounded-3">
+                            <h5 class="text-gold fw-bold">Cámaras Bullet IP HD</h5>
+                            <p class="mb-0">Diseñadas para exteriores, protección contra intemperie y visión nocturna infrarroja de largo alcance.</p>
                         </div>
                     </div>
-
                     <!-- Imagen 2 -->
                     <div class="carousel-item">
                         <div class="carousel-img-container">
-                            <img src="img/camaras/cam_2.png" class="d-block img-fluid carousel-img-fit" alt="Kits Completos de Seguridad DVR/NVR">
+                            <img src="img/camaras/cam_2.png" class="d-block img-fluid mx-auto carousel-img" alt="Kits Completos de Seguridad">
                         </div>
-                        <div class="carousel-caption d-block bg-dark-overlay rounded-3">
-                            <h5 class="text-gold fw-bold">Kits de Seguridad e Integración</h5>
-                            <p class="mb-0">Sistemas integrados de grabado NVR/DVR con visualización remota en vivo.</p>
+                        <div class="carousel-caption bg-dark-overlay rounded-3">
+                            <h5 class="text-gold fw-bold">Kits Completos y DVR/NVR</h5>
+                            <p class="mb-0">Sistemas integrados con grabación continua, almacenamiento seguro y monitoreo en tiempo real desde celular.</p>
                         </div>
                     </div>
-
                     <!-- Imagen 3 -->
                     <div class="carousel-item">
                         <div class="carousel-img-container">
-                            <img src="img/camaras/cam_3.png" class="d-block img-fluid carousel-img-fit" alt="Cámaras IP Alta Definición">
+                            <img src="img/camaras/cam_3.png" class="d-block img-fluid mx-auto carousel-img" alt="Cámaras Domo y Compactas">
                         </div>
-                        <div class="carousel-caption d-block bg-dark-overlay rounded-3">
-                            <h5 class="text-gold fw-bold">Cámaras IP Full HD / 4K</h5>
-                            <p class="mb-0">Calidad de imagen cristalina, detección de movimiento e infrarrojo inteligente.</p>
+                        <div class="carousel-caption bg-dark-overlay rounded-3">
+                            <h5 class="text-gold fw-bold">Cámaras Domo y Compactas</h5>
+                            <p class="mb-0">Monitoreo discreto e ideal para oficinas, locales comerciales y zonas de atención al cliente.</p>
                         </div>
                     </div>
-
                     <!-- Imagen 4 -->
                     <div class="carousel-item">
                         <div class="carousel-img-container">
-                            <img src="img/camaras/cam_4.png" class="d-block img-fluid carousel-img-fit" alt="Cámaras Domo Antivandálicas / PTZ">
+                            <img src="img/camaras/cam_4.png" class="d-block img-fluid mx-auto carousel-img" alt="Cámaras de Alta Gama Dahua / Hikvision">
                         </div>
-                        <div class="carousel-caption d-block bg-dark-overlay rounded-3">
-                            <h5 class="text-gold fw-bold">Cámaras de Gran Alcance y PTZ</h5>
-                            <p class="mb-0">Carcasa reforzada ideal para exteriores e instalaciones de alta resistencia.</p>
+                        <div class="carousel-caption bg-dark-overlay rounded-3">
+                            <h5 class="text-gold fw-bold">Sistemas Avanzados Dahua</h5>
+                            <p class="mb-0">Tecnología de última generación con sensor de movimiento, visión nocturna en color y carcasa reforzada.</p>
                         </div>
                     </div>
                 </div>
-
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselCamaras" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
@@ -170,7 +165,7 @@
                 <h2 class="section-title">PROYECTOS E INSTALACIONES</h2>
                 <p class="text-muted-custom">La calidad y limpieza de nuestro trabajo nos respalda</p>
             </div>
-            <div id="carouselInstalaciones" class="carousel slide custom-carousel shadow-lg rounded-3 overflow-hidden" data-bs-ride="carousel" data-bs-interval="4000">
+            <div id="carouselInstalaciones" class="carousel slide custom-carousel shadow-lg rounded-3 overflow-hidden" data-bs-ride="carousel" data-bs-interval="5000">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselInstalaciones" data-bs-slide-to="0" class="active"></button>
                     <button type="button" data-bs-target="#carouselInstalaciones" data-bs-slide-to="1"></button>
@@ -259,6 +254,7 @@
     </footer>
 
     <!-- BOOTSTRAP 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -127,3 +127,23 @@ body {
 @media (max-width: 768px) {
     .carousel-img { height: 280px; }
 }
+/* AJUSTES PARA IMÁGENES DE CÁMARAS SOBRE FONDO OSCURO */
+.carousel-img-container {
+    background-color: #ffffff;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.carousel-img-container .carousel-img {
+    max-height: 380px;
+    width: auto !important;
+    object-fit: contain;
+}
+
+/* Transición más suave entre diapositivas */
+.carousel-item {
+    transition: transform 1.2s ease-in-out, opacity 1.2s ease-in-out;
+}

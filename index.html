@@ -29,7 +29,7 @@
                 <ul class="navbar-nav ms-auto align-items-center gap-2">
                     <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#camaras">Cámaras</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#instalaciones">Instalaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#marcas">Marcas</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
                     <li class="nav-item ms-lg-2">
                         <a class="btn btn-whatsapp fw-bold rounded-pill px-3" href="https://wa.me/5210000000000?text=Hola,%20me%20interesa%20una%20cotización%20de%20sus%20servicios%20de%20CCTV%20y%20Sistemas." target="_blank">
@@ -51,7 +51,7 @@
                     <p class="lead text-muted-custom mb-4">Especialistas en instalación de videovigilancia CCTV, estructuración de redes, soporte técnico e infraestructura de sistemas para empresas y particulares.</p>
                     <div class="d-flex justify-content-center gap-3 flex-wrap">
                         <a href="#contacto" class="btn btn-gold btn-lg fw-bold">Solicitar Cotización</a>
-                        <a href="#instalaciones" class="btn btn-outline-cyan btn-lg fw-bold">Ver Proyectos</a>
+                        <a href="#marcas" class="btn btn-outline-cyan btn-lg fw-bold">Nuestras Marcas</a>
                     </div>
                 </div>
             </div>
@@ -91,14 +91,13 @@
         </div>
     </section>
 
-    <!-- CARRUSEL 1: CÁMARAS Y EQUIPAMIENTO (AUTOMÁTICO Y LENTO) -->
+    <!-- CARRUSEL 1: CÁMARAS Y EQUIPAMIENTO -->
     <section id="camaras" class="py-5 bg-card">
         <div class="container py-4">
             <div class="text-center mb-4">
                 <h2 class="section-title">EQUIPAMIENTO Y CÁMARAS</h2>
                 <p class="text-muted-custom">Catálogo de modelos de alta definición y tecnología avanzada</p>
             </div>
-            <!-- Se configura interval en 4500ms (4.5s) para movimiento pausado y suave -->
             <div id="carouselCamaras" class="carousel slide custom-carousel shadow-lg rounded-3 overflow-hidden" data-bs-ride="carousel" data-bs-interval="4500">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselCamaras" data-bs-slide-to="0" class="active"></button>
@@ -107,7 +106,6 @@
                     <button type="button" data-bs-target="#carouselCamaras" data-bs-slide-to="3"></button>
                 </div>
                 <div class="carousel-inner">
-                    <!-- Imagen 1 -->
                     <div class="carousel-item active">
                         <div class="carousel-img-container">
                             <img src="img/camaras/cam_1.png" class="d-block img-fluid mx-auto carousel-img" alt="Cámara Bullet IP HD">
@@ -117,7 +115,6 @@
                             <p class="mb-0">Diseñadas para exteriores, protección contra intemperie y visión nocturna infrarroja de largo alcance.</p>
                         </div>
                     </div>
-                    <!-- Imagen 2 -->
                     <div class="carousel-item">
                         <div class="carousel-img-container">
                             <img src="img/camaras/cam_2.png" class="d-block img-fluid mx-auto carousel-img" alt="Kits Completos de Seguridad">
@@ -127,7 +124,6 @@
                             <p class="mb-0">Sistemas integrados con grabación continua, almacenamiento seguro y monitoreo en tiempo real desde celular.</p>
                         </div>
                     </div>
-                    <!-- Imagen 3 -->
                     <div class="carousel-item">
                         <div class="carousel-img-container">
                             <img src="img/camaras/cam_3.png" class="d-block img-fluid mx-auto carousel-img" alt="Cámaras Domo y Compactas">
@@ -137,10 +133,9 @@
                             <p class="mb-0">Monitoreo discreto e ideal para oficinas, locales comerciales y zonas de atención al cliente.</p>
                         </div>
                     </div>
-                    <!-- Imagen 4 -->
                     <div class="carousel-item">
                         <div class="carousel-img-container">
-                            <img src="img/camaras/cam_4.png" class="d-block img-fluid mx-auto carousel-img" alt="Cámaras de Alta Gama Dahua / Hikvision">
+                            <img src="img/camaras/cam_4.png" class="d-block img-fluid mx-auto carousel-img" alt="Sistemas Avanzados Dahua">
                         </div>
                         <div class="carousel-caption bg-dark-overlay rounded-3">
                             <h5 class="text-gold fw-bold">Sistemas Avanzados Dahua</h5>
@@ -158,40 +153,58 @@
         </div>
     </section>
 
-    <!-- CARRUSEL 2: GALERÍA DE INSTALACIONES -->
-    <section id="instalaciones" class="py-5">
-        <div class="container py-4">
+    <!-- NUEVO: CARRUSEL MINIMALISTA DE MARCAS LÍDERES -->
+    <section id="marcas" class="py-5">
+        <div class="container py-3">
             <div class="text-center mb-4">
-                <h2 class="section-title">PROYECTOS E INSTALACIONES</h2>
-                <p class="text-muted-custom">La calidad y limpieza de nuestro trabajo nos respalda</p>
+                <h2 class="section-title fs-3">MARCAS QUE MANEJAMOS</h2>
+                <p class="text-muted-custom small">Trabajamos únicamente con los fabricantes líderes de la industria</p>
             </div>
-            <div id="carouselInstalaciones" class="carousel slide custom-carousel shadow-lg rounded-3 overflow-hidden" data-bs-ride="carousel" data-bs-interval="5000">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselInstalaciones" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#carouselInstalaciones" data-bs-slide-to="1"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 carousel-img" alt="Instalación de Rack">
-                        <div class="carousel-caption d-none d-md-block bg-dark-overlay rounded-3">
-                            <h5 class="text-gold fw-bold">Cableado Estructurado y Racks</h5>
-                            <p>Organización profesional de centros de cómputo y patch panels.</p>
+
+            <!-- Carrusel compacto en tamaño max-width 600px -->
+            <div class="row justify-content-center">
+                <div class="col-md-7 col-lg-5">
+                    <div id="carouselMarcas" class="carousel slide brand-carousel shadow-sm rounded-4 overflow-hidden" data-bs-ride="carousel" data-bs-interval="3500">
+                        <div class="carousel-inner">
+                            <!-- Marca 1: Hikvision -->
+                            <div class="carousel-item active">
+                                <div class="brand-card d-flex flex-column align-items-center justify-content-center p-4">
+                                    <img src="img/marcas/mar_1.png" class="img-fluid brand-logo" alt="Hikvision">
+                                    <span class="badge bg-gold text-dark mt-3 px-3 py-1 fw-bold">Hikvision</span>
+                                </div>
+                            </div>
+                            <!-- Marca 2: Epcom -->
+                            <div class="carousel-item">
+                                <div class="brand-card d-flex flex-column align-items-center justify-content-center p-4">
+                                    <img src="img/marcas/mar_2.png" class="img-fluid brand-logo" alt="Epcom Power Line">
+                                    <span class="badge bg-gold text-dark mt-3 px-3 py-1 fw-bold">Epcom</span>
+                                </div>
+                            </div>
+                            <!-- Marca 3: HiLook -->
+                            <div class="carousel-item">
+                                <div class="brand-card d-flex flex-column align-items-center justify-content-center p-4">
+                                    <img src="img/marcas/mar_3.png" class="img-fluid brand-logo" alt="HiLook by Hikvision">
+                                    <span class="badge bg-gold text-dark mt-3 px-3 py-1 fw-bold">HiLook</span>
+                                </div>
+                            </div>
+                            <!-- Marca 4: Dahua -->
+                            <div class="carousel-item">
+                                <div class="brand-card d-flex flex-column align-items-center justify-content-center p-4">
+                                    <img src="img/marcas/mar_4.png" class="img-fluid brand-logo" alt="Dahua Technology">
+                                    <span class="badge bg-gold text-dark mt-3 px-3 py-1 fw-bold">Dahua Technology</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1200&q=80" class="d-block w-100 carousel-img" alt="Montaje de Cámaras">
-                        <div class="carousel-caption d-none d-md-block bg-dark-overlay rounded-3">
-                            <h5 class="text-gold fw-bold">Montaje y Altura</h5>
-                            <p>Instalaciones limpias, protegidas con tubería conduit para máxima durabilidad.</p>
-                        </div>
+
+                        <!-- Flechas de navegación discretas -->
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMarcas" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon opacity-75"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMarcas" data-bs-slide="next">
+                            <span class="carousel-control-next-icon opacity-75"></span>
+                        </button>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselInstalaciones" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselInstalaciones" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
             </div>
         </div>
     </section>
@@ -254,7 +267,6 @@
     </footer>
 
     <!-- BOOTSTRAP 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
